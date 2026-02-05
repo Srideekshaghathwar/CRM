@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM Calendar</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="sidebar">
+        <h2>CRM</h2>
+       <ul class="sidebar-menu">
+  <li class="section">DASHBOARD</li>
+
+  <li class="section">APPLICATION</li>
+  <li><a href="/leads"><i class="fa-solid fa-user-plus"></i> Leads</a></li>
+  <li><a href="/contacts"><i class="fa-solid fa-address-book"></i> Contacts</a></li>
+  <li><a href="/deals"><i class="fa-solid fa-handshake"></i> Deals</a></li>
+  <li><a href="/activities"><i class="fa-solid fa-list-check"></i> Activities</a></li>
+  <li class="active"><a href="/calendar"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+  <li><a href="/email"><i class="fa-solid fa-envelope"></i> E-Mail</a></li>
+  <li><a href="/report"><i class="fa-solid fa-chart-pie"></i> Report</a></li>
+  <li><a href="/settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+</ul>
+
+
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+            <div class="center"></div>
+            <div class="search">
+                <input type="text" placeholder="Search using date">
+            </div>
+            <div class="top-right">
+                <div class="bell">🔔</div>
+                <div class="profile">
+                    <div class="avatar"></div>
+                    MAX
+                </div>
+            </div>
+        </div>
+
+        <div class="header">
+            <h1>Calendar</h1>
+
+            <div class="view-buttons">
+                
+                <button class="new-btn">+ New event ▾</button>
+                <button id="prevMonth">&#10094;</button>
+                <h2 id="monthYear"></h2>
+               <button id="nextMonth">&#10095;</button>
+
+            </div>
+
+            <div class="filters">
+                <span class="active-filter">All events</span>
+                <span>Meetings</span>
+                <span>Tasks</span>
+                <span>Reminders</span>
+                <span>Export</span>
+            </div>
+        </div>
+
+        <div class="calendar-wrapper">
+            
+
+
+            <div class="days">
+                <div>Sun</div><div>Mon</div><div>Tue</div>
+                <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+            </div>
+
+            <div class="calendar-grid" id="calendarDays"></div>
+            <div class="events-layer" id="eventsLayer"></div>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
